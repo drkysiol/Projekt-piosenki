@@ -6,10 +6,19 @@ body {
     color: beige;
 }
 
+
 select , input , button {
     border: #190028 3px solid;
     color: beige;
     background-color: #220135;
+}
+
+.song button {
+    background-color: honeydew;
+    color: #11001C;
+    height: 210px;
+    margin: 0;
+    border: 0;
 }
 
 h1 {
@@ -37,9 +46,8 @@ h1 {
     background-color: #220135;
   }
 .song img {
-    width: 200px;
-    height: 200px;
-    border-right: #190028 3px solid;
+    width: 210px;
+    height: 210px;
 }
 .info {
     display: flex;
