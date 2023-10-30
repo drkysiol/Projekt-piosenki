@@ -7,17 +7,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const sortDurationButton = document.getElementById('sort-duration-button');
     let songs = []
 
+    function convertSecToMin(seconds) {
+        let minutes = Math.floor(seconds / 60);
+        let extraSeconds = seconds % 60;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        extraSeconds = extraSeconds < 10 ? "0" + extraSeconds : extraSeconds;
+        return minutes + ":" + extraSeconds
+    }
+
     function sortSongsByDuration() {
         const sortedsongs = songs.sort((a, b) => a.duration - b.duration);
 
         songsDiv.innerHTML = '';
         sortedsongs.forEach(song => {
+            time = convertSecToMin(song.duration)
             songsDiv.innerHTML += `
                 <div class="song">
                     <img src="${song.coverUrl}" alt="Song Cover">
-                    <div class="title-artist"> 
+                    <div class="info"> 
                         <h2 class="title">${song.title}</h2>
                         <h2 class="artists">${song.artists}</h2>
+                        <h2 class="artists">${time}</h2>
                     </div>   
                 </div>
             `;
@@ -40,12 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     (search === '' || song.title.toLowerCase().includes(search.toLowerCase()))
                 ) {
                     songs.push(song)
+                    time = convertSecToMin(song.duration)
                 songsDiv.innerHTML += `
                     <div class="song">
                         <img src="${song.coverUrl}" alt="Song Cover">
-                        <div class="title-artist"> 
+                        <div class="info"> 
                             <h2 class="title">${song.title}</h2>
                             <h2 class="artists">${song.artists}</h2>
+                            <h2 class="artists">${time}</h2>
                         </div>
                     </div>
                 `;

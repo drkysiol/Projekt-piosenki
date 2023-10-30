@@ -6,7 +6,7 @@ body {
     color: beige;
 }
 
-select , input {
+select , input , button {
     border: #190028 3px solid;
     color: beige;
     background-color: #220135;
@@ -37,11 +37,11 @@ h1 {
     background-color: #220135;
   }
 .song img {
-    max-width: 150px;
-    max-height: 150px;
+    width: 200px;
+    height: 200px;
     border-right: #190028 3px solid;
 }
-.title-artist {
+.info {
     display: flex;
     flex-direction: column;
     align-items: center;
