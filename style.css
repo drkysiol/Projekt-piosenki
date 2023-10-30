@@ -6,17 +6,28 @@ body {
     color: beige;
 }
 
+.songs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
 
 select , input , button {
     border: #190028 3px solid;
     color: beige;
     background-color: #220135;
+    max-width: 100%;
+}
+
+select option{
+    text-align: center;
 }
 
 .song button {
-    background-color: honeydew;
+    background-color: #240046;
     color: #11001C;
     height: 210px;
+    width: 5%;
     margin: 0;
     border: 0;
 }
@@ -54,9 +65,25 @@ h1 {
     flex-direction: column;
     align-items: center;
     margin-left: 10%;
+    text-align: center;
 }
 
 .artists{
     font-size: 130%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+@media (max-width: 900px) {
+    .songs {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    #filter-form {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .song button {
+        width: 6%;
+        height: 100%;
+    }
+  }
