@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+    background-color: #11001C;
+    color: beige;
+}
+
+select , input {
+    border: #190028 3px solid;
+    color: beige;
+    background-color: #220135;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+#filter-form {
+    margin: 20px 0;
+}
+
+#genre-select, #tempo-select, #search-input {
+    margin-right: 10px;
+}
+
+.header ,.main-header {
+    font-size: 130%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.song{
+    display: flex;
+    margin: 20px;
+    border: #190028 5px solid;
+    border-radius: 10px;
+    background-color: #220135;
+  }
+.song img {
+    max-width: 150px;
+    max-height: 150px;
+    border-right: #190028 3px solid;
+}
+.title-artist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.artists{
+    font-size: 130%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

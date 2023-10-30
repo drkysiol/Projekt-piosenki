@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Utworów</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Lista Utworów</h1>
+    <button id="sort-duration-button">Sort by Duration</button>
+
+    <div id="filter-form">
+        <label for="genre-select">Wybierz gatunek:</label>
+        <select id="genre-select">
+            <option value="all">Wszystkie</option>
+        </select>
+        <label for="tempo-select">Wybierz tempo:</label>
+        <select id="tempo-select">
+            <option value="all">Wszystkie</option>
+            <option value="slow">Wolne (110 - BPM)</option>
+            <option value="medium">Średnie (110 - 130 BPM)</option>
+            <option value="fast">Szybkie (130+ BPM)</option>
+        </select>
+        <label>Wyszukaj:</label>
+        <input type="text" id="search-input">
+    </div>
+
+    <div class="songs">
+
+    </div>
+
+</body>
+</html>
